@@ -1,0 +1,108 @@
+year Par
+los jugadores que hallan nacido en un a�o par deberan tomar
+1
+year impares
+los jugadores que hallan nacido en un a�o impar deberan tomar
+1
+Mujeres
+los jugadores hembras deberan tomar
+1
+Hombre
+los jugadores machos deberan tomar
+1
+Ingenieros
+todos los que hallan estudiando o esten estudiando ingenieria deberan tomar
+1
+Docs
+todos los que estudien o hallan estudiando algo con relaciona con salud deberan tomar
+1
+Artistas
+todos los que estudien o hallan estudiando algo relacionado con artes deberan tomar
+1
+Solteros
+todos los forever alone deben tomar
+1
+No Solteros
+todos los que esten en una relacion, ya sea complicada o no, deberan tomar
+1
+Amigables
+todos los que terminaron como amigos con su Ex deberan tomar
+1
+Porros
+todos los que hallan repetido un curso o ramo deberan tomar
+1
+Calcetines
+todos los que tengan calcetines blancos deberan tomar
+1
+Papa
+todos los que tengan una papa en el o los calcetines deberan beber
+1
+Abogados
+todos los que esten estudiando o hallan estudiando algo relacionadio con  derecho deberan beber
+1
+Apacionados
+todos los que se hallan besado un algun o alguna desconocid@ deberan beber
+1
+Haters
+todos los que alguna le han gritado al computador o a la Tv por una rabieta deben beber
+1
+Hipsters
+todos los que utilizen lentes deben beber :v
+1
+Emojis
+todos los que envian mas emojis que palabras deben beber
+1
+Borrachos
+todos los que alguna vez se han borrado deberan beber
+1
+Fumadores
+todos los que fumen o hallan fumado deberan beber
+1
+Paracitos
+todos los que vivan con sus padres beben
+1
+Independiente
+todos los que vivan sin sus padres deberan beber
+1
+Android
+todos los que sean usuarios de android deberan tomar
+1
+Iphone
+todos los que tengan un iphone tienen que tomar
+1
+Windows
+todos los que poosean un dispositivo windows deberan tomar
+1
+Mac
+todos los que tengan un Mac deberan tomar
+1
+Linux
+todos los que programen en linux pasen el codigo y de paso tomen
+1
+Te�idas
+todos los que se hallan te�ido el pelo deberan tomar
+1
+Faperos
+todos los que hallan visto porno deberan tomar
+1
+Fanaticos
+todos los que se hallan terminado una serie de corrido deberan tomar
+1
+Billinguishes
+todos los que domines mas de 1 idioma deberan tomar
+1
+Dormilones
+todos los que se hallan quedado dormido alguna vez en un carrete deberan beber
+1
+Virgenes
+todos los que sigan castos y virgenes no les queda mucho :v y de paso beben por wn
+1
+Cultura chupistica
+instrucciones del nico
+3
+Yo nunca nunca
+instrucciones nico
+3
+Otakus
+todos los que hallan visto una serie entera de anime beben
+1

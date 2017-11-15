@@ -1,0 +1,64 @@
+# depslib dependency file v1.0
+1510183550 source:c:\users\puri\desktop\sendo\hashmap.c
+	<stdio.h>
+	<stdlib.h>
+	"HashMap.h"
+
+1510179244 c:\users\puri\desktop\sendo\hashmap.h
+	<stdlib.h>
+
+1503087626 source:c:\users\puri\desktop\sendo\lista.c
+	"Lista.h"
+	<stdlib.h>
+	<stdio.h>
+
+1510182100 c:\users\puri\desktop\sendo\lista.h
+
+1510184397 source:c:\users\puri\desktop\sendo\sendo.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	"Lista.h"
+	"HashMap.h"
+
+1510545605 source:c:\users\uller\desktop\sendo\hashmap.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"HashMap.h"
+
+1510197244 c:\users\uller\desktop\sendo\hashmap.h
+	<stdlib.h>
+
+1510557322 source:c:\users\uller\desktop\sendo\lista.c
+	"Lista.h"
+	<stdlib.h>
+	<stdio.h>
+
+1510557292 c:\users\uller\desktop\sendo\lista.h
+
+1510553253 source:c:\users\uller\desktop\sendo\sendo.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	"Lista.h"
+	"HashMap.h"
+
+1510541756 source:c:\users\uller\desktop\sendo\prueba_lista.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	"Lista.h"
+	"HashMap.h"
+
+1510549663 source:c:\users\uller\desktop\sendo\list.c
+	<stdlib.h>
+	"List.h"
+
+1510549663 c:\users\uller\desktop\sendo\list.h
+	<stdio.h>
+	<stdlib.h>
+
