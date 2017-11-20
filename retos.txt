@@ -1,108 +1,51 @@
-year Par
-los jugadores que hallan nacido en un a�o par deberan tomar
-1
-year impares
-los jugadores que hallan nacido en un a�o impar deberan tomar
-1
-Mujeres
-los jugadores hembras deberan tomar
-1
-Hombre
-los jugadores machos deberan tomar
-1
-Ingenieros
-todos los que hallan estudiando o esten estudiando ingenieria deberan tomar
-1
-Docs
-todos los que estudien o hallan estudiando algo con relaciona con salud deberan tomar
-1
-Artistas
-todos los que estudien o hallan estudiando algo relacionado con artes deberan tomar
-1
-Solteros
-todos los forever alone deben tomar
-1
-No Solteros
-todos los que esten en una relacion, ya sea complicada o no, deberan tomar
-1
-Amigables
-todos los que terminaron como amigos con su Ex deberan tomar
-1
-Porros
-todos los que hallan repetido un curso o ramo deberan tomar
-1
-Calcetines
-todos los que tengan calcetines blancos deberan tomar
-1
-Papa
-todos los que tengan una papa en el o los calcetines deberan beber
-1
-Abogados
-todos los que esten estudiando o hallan estudiando algo relacionadio con  derecho deberan beber
-1
-Apacionados
-todos los que se hallan besado un algun o alguna desconocid@ deberan beber
-1
-Haters
-todos los que alguna le han gritado al computador o a la Tv por una rabieta deben beber
-1
-Hipsters
-todos los que utilizen lentes deben beber :v
-1
-Emojis
-todos los que envian mas emojis que palabras deben beber
-1
-Borrachos
-todos los que alguna vez se han borrado deberan beber
-1
-Fumadores
-todos los que fumen o hallan fumado deberan beber
-1
-Paracitos
-todos los que vivan con sus padres beben
-1
-Independiente
-todos los que vivan sin sus padres deberan beber
-1
-Android
-todos los que sean usuarios de android deberan tomar
-1
-Iphone
-todos los que tengan un iphone tienen que tomar
-1
-Windows
-todos los que poosean un dispositivo windows deberan tomar
-1
-Mac
-todos los que tengan un Mac deberan tomar
-1
-Linux
-todos los que programen en linux pasen el codigo y de paso tomen
-1
-Te�idas
-todos los que se hallan te�ido el pelo deberan tomar
-1
-Faperos
-todos los que hallan visto porno deberan tomar
-1
-Fanaticos
-todos los que se hallan terminado una serie de corrido deberan tomar
-1
-Billinguishes
-todos los que domines mas de 1 idioma deberan tomar
-1
-Dormilones
-todos los que se hallan quedado dormido alguna vez en un carrete deberan beber
-1
-Virgenes
-todos los que sigan castos y virgenes no les queda mucho :v y de paso beben por wn
-1
-Cultura chupistica
-instrucciones del nico
-3
-Yo nunca nunca
-instrucciones nico
-3
-Otakus
-todos los que hallan visto una serie entera de anime beben
-1
+year Par , los jugadores que hallan nacido en un a�o par deberan tomar , 1
+year impares , los jugadores que hallan nacido en un a�o impar deberan tomar , 1
+Mujeres , los jugadores hembras deberan tomar , 1
+Hombre , los jugadores machos deberan tomar , 1
+Ingenieros , todos los que hallan estudiando o esten estudiando ingenieria deberan tomar , 1
+Docs , todos los que estudien o hallan estudiando algo con relaciona con salud deberan tomar , 1
+Artistas , todos los que estudien o hallan estudiando algo relacionado con artes deberan tomar , 1
+Solteros , todos los forever alone deben tomar , 1
+No Solteros , todos los que esten en una relacion, ya sea complicada o no, deberan tomar , 1
+Amigables , todos los que terminaron como amigos con su Ex deberan tomar , 1
+Porros , todos los que hallan repetido un curso o ramo deberan tomar , 1
+Calcetines , todos los que tengan calcetines blancos deberan tomar , 1
+Papa , todos los que tengan una papa en el o los calcetines deberan beber , 1
+Abogados , todos los que esten estudiando o hallan estudiando algo relacionadio con  derecho deberan beber , 1
+Apacionados , todos los que se hallan besado un algun o alguna desconocid@ deberan beber , 1
+Haters , todos los que alguna le han gritado al computador o a la Tv por una rabieta deben beber , 1
+Hipsters , todos los que utilizen lentes deben beber , 1
+Emojis , todos los que envian mas emojis que palabras deben beber , 1
+Borrachos , todos los que alguna vez se han borrado deberan beber , 1
+Fumadores , todos los que fumen o hallan fumado deberan beber , 1
+Parasitos , todos los que vivan con sus padres beben , 1
+Independiente , todos los que vivan sin sus padres deberan beber , 1
+Android , todos los que sean usuarios de android deberan tomar , 1
+Iphone , todos los que tengan un iphone tienen que tomar , 1
+Windows , todos los que poosean un dispositivo windows deberan tomar , 1
+Mac , todos los que tengan un Mac deberan tomar , 1
+Linux , todos los que programen en linux pasen el codigo y de paso tomen , 1
+Tintura de pelo , todos los que se hallan te�ido el pelo deberan tomar , 1
+Faperos , todos los que hallan visto porno deberan tomar , 1
+Fanaticos , todos los que se hallan terminado una serie de corrido deberan tomar , 1
+Billinguishes , todos los que domines mas de 1 idioma deberan tomar , 1
+Dormilones , todos los que se hallan quedado dormido alguna vez en un carrete deberan beber , 1
+Virgenes , todos los que sigan castos y virgenes beben , 1
+Cultura chupistica , la cultura chupistica pide "nombres de paises" , 3
+Yo nunca nunca , ejemplo: yo nunca nunca me eh drogado los que no cumplan eso toman , 3
+Otakus , todos los que hallan visto una serie entera de anime beben , 1
+Coctel de Ropa , Todos despidanse de una prenda y dejadla en un monticulo , 4
+Cambio , Cambia la polera o poleron con quien se siente al frente tuyo , 4
+Zapatillas change , Cambia tu calzado con quien este a tu derecha , 4
+Escudero , Quien este a tu izquierda sera tu maestro, como escudero deberas de protegerlo durante toda una ronda , 5
+JackSparrow , Como el famoso pirata jack Sparrow toma la botella de mayor octanaje y bebe a lo pirata, finaliza diciendo "Ahrrrr!" , 5
+Apostemos , toma una moneda y apuesta cara o sello, escoje la cantidad de sorbos que arriesgas, si ganas regalas el doble de lo que apostaste, sino bebes tu apuesta , 4
+Los Rikos , A decicion de la mayoria, los mas rikos deberan hacer un brindis y darse un beso , 5
+Historias , Comienza una historia que te halla pasado, el tu derecha debera beber 1 sorbo y continuar con una expansion de esa historia(inventada o no), asi continuamente hasta que alguien no sea capaz de seguir(5 segundos y fuera) , 6
+Cascada , Comienza a beber y hacia tu derecha deberan empezar a tomar, nadie para hasta que tu lo hagas , 4
+Shots , escoge a un compañero, cruzen sus brazos y tomence un "shots" , 4
+Casados , Felicidades!!! ahora estas casado con quien este al frente tuyo! todos beben la cantidad de Fé que le tengan a la pareja!PD: desde ahora comparten todo!! los retos y penitencias!, los que uno bebe el otro tbn! , 5
+Doctor Amor , Debes cambiar el nombre de tu usuario de facebook o instagram a doctor amor!!  , 5
+Borracho , Ha decicion de las masas!!todos menos el mas borracho deberan tomar , 4
+Cupido!! , Ha decicion de las masas! el y la mas borracha deberan darse un piquito , 5
+Verdad o prenda , Hacer un ronda de verdad o prenda!, 5

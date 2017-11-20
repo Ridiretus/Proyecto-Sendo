@@ -33,6 +33,7 @@
 		</Compiler>
 		<Unit filename="HashMap.c">
 			<Option compilerVar="CC" />
+			<Option compile="0" />
 		</Unit>
 		<Unit filename="HashMap.h" />
 		<Unit filename="Lista.c">

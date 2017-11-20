@@ -4,8 +4,8 @@
 #include <ctype.h>
 #include <windows.h>
 #include "Lista.h"
-#include<conio.h>
-#include<time.h>
+#include <conio.h>
+#include <time.h>
 #ifdef _WIN32
 #define clear system("cls")
 #else
@@ -29,16 +29,14 @@ typedef struct{
 //Prototipacion de funciones
 jugador* create_jugador();//crea y inicializa los campos de un dato de tipo jugador.
 reto* create_reto();//crea y inicializa los campos de un dato de tipo reto.
-long string_to_int(char*);//transforma una palabra en un numero para ser usado como claves en estructuras de datos.
 
-
-void comparar_lista(List*,reto*);
-void cargar_retadores(List*);
+void comparar_lista(List*,reto*);//ve si el reto ingresado a la lista ya existe bajo el mismo nombre.
+void cargar_retadores(List*);//carga los jugadores para un juego en modo retador
 void cargar_jugadores(List*);// carga los jugadores ingresados por el ususario en una lista.
 void retos_txt(List*);// carga todos los retos desde un txt hacia una lista.
 
-void glosario();//tiene los significados de algunos terminos poco conocidos dentro del juego.
-void about();//tiene los creditos de la aplicacion.
+void glosario(List*,List*);//tiene los significados de algunos terminos poco conocidos dentro del juego.
+void about(List*,List*);//tiene los creditos de la aplicacion.
 
 void menu_modos(List*,List*);//para organizar las opciones de los modos del juego.
 void menu_jugadores(List*,List*);//organiza las opciones de los jugadores tales como agregar y eliminar.
@@ -54,7 +52,7 @@ void retos_SS_1(List*,List*);//reto especial del modo motivados el que hace es u
 /*void retos_SS_2(List*,List*);//reto especial del modo motivados el que hace es un secreto
 void retos_SS_3(List*,List*)://reto especial del modo motivados el que hace es un misterio
 */
-int random_n(int);
+int random_n(int);//para tirar numeros al azar.
 
 int main(){
     List* jugadores=create_list();
@@ -67,7 +65,7 @@ int main(){
   printf("|sobre cuanto puede beber es usted dicho esto empecemos.\n\n");
 
   printf("\n| Para jugar correctamente es necesario que tengan dados, o algun metodo de azar\n");
-  printf("| ya que la cantidad de tragos se decidira segun ustedes (pueden usar cuantos dados quieran).");
+  printf("| ya que la cantidad de tragos se decidira segun ustedes (pueden usar cuantos dados quieran).\n| \n");
 
   cargar_jugadores(jugadores);
   retos_txt(retos);
@@ -164,12 +162,24 @@ void retos_txt(List* retos){
   fclose(retos_file);
 }//work
 
-void glosario(){
-  printf("aqui van las descripciones");
+void glosario(List* players,List* retos){
+  printf("| Aqui estan los terminos mas usados durante el juego \n|que posiblemente no conoscan.");
+  printf("|\n| Nunca nunca:\n| Es un juego el cual consiste e decir una frase en negativo agregando\n| antes la frase nunca nunca (ej: yo nunca nunca eh mentido) \n| aquellos que no cumplan con esa frase (osea que si hayan mentido en este caso)\n| deberan beber lo indicado.\n");
+  printf("|\n");
+  printf("| La culturachupistica: Es otro juego el cual consiste en que el anfitrio\n| pedira algo (nombres o palabras generalmente, ej: la cultura chupistica pide nombres de marcas de autos)\n| y los participantes en orden le diran lo que pide \n| el que se equivoque o repita algo ya dicho paga la penitencia.\n|");
+  printf("\n");
+  printf("| ");
+  system("pause");
+  Main_menu(players,retos);
 }//work
 
-void about(){
-  printf("aqui van datos sobre el programa");
+void about(List* players, List* retos){
+  printf("Este programa fue desarrollado por 'Team Sendo', derechos reservados");
+  printf("Team sendo esta conformado por las siguientes personas:\n| Nicolas Lopez. \n| Patricio Mardonez. \n| Gonzalo Rojas.\n");
+  printf("\n Version: 1.04 ");
+  printf("Cantidad de retos base actuales: %d.",retos->cont);
+  system("pause");
+  Main_menu(players,retos);
 }//work
 
 void menu_modos(List* players,List* retos){
@@ -179,19 +189,19 @@ void menu_modos(List* players,List* retos){
   printf("|-.2 Motivados: \n|\tSi ya sabes de que va el juego\n|\ty quieres repasar la experiencia\n|\to si simplemente crees tener un minimo de experiencia\n|\teste es tu modo\n|\taqui no hay limite de turnos esto dura\n|\thasta que ustedes decidan\n\n");
   printf("|-.3 Retador: \n|\tBueno si has llegado hasta aqui\n|\tes que a lo menos algo tienes de curiosidad\n|\tbueno este modo es solo de 2 jugadores\n|\ty es un modo de muerte subita\n|\tsi quieres competir\n|\tentra bajo tu propio riesgo\n\n");
   printf("|-.4 Volver al menu anterior.\n");
-  int eleccion;
-  scanf("%d",&eleccion);
+  char eleccion[10];
+  scanf("%s",eleccion);
   clear;
-  if(eleccion==1){
+  if(strcmp(eleccion,"1")==0){
     modo_previa(players,retos);
   }else{
-    if(eleccion==2){
+    if(strcmp(eleccion,"2")==0){
       modo_motivados(players,retos);
     }else{
-      if(eleccion==3){
+      if(strcmp(eleccion,"3")==0){
         modo_retador(players,retos);
       }else{
-        if(eleccion==4){
+        if(strcmp(eleccion,"4")==0){
           Main_menu(players,retos);
         }else{
           printf("| Opcion no valida, por favor intente de nuevo.\n\n");
@@ -204,15 +214,14 @@ void menu_modos(List* players,List* retos){
 }//work
 
 void menu_jugadores(List* players,List* retos){
-  int eleccion;
+  char eleccion[10];
   clear;
   printf("| ¿Que deseas hacer?\n");
   printf("|-.1 Agregar un nuevo jugador.\n");
   printf("|-.2 Eliminar un jugador.\n");
-  printf("|-.3 Descalificar un jugador(cuando un jugador pierde).\n");
-  printf("|-.4 Volver al menu anterior (se guardan los cambios hechos).\n");
-  scanf("%d",&eleccion);
-  if(eleccion==1){
+  printf("|-.3 Volver al menu anterior (se guardan los cambios hechos).\n");
+  scanf("%s",eleccion);
+  if(strcmp(eleccion,"1")==0){
     jugador* nuevo=create_jugador();
     printf("| Ingrese el nombre:\n");
     scanf("%s",nuevo->nombre);
@@ -221,7 +230,7 @@ void menu_jugadores(List* players,List* retos){
 
     menu_jugadores(players,retos);
   }else{
-    if(eleccion==2){
+    if(strcmp(eleccion,"2")==0){
       int cont=players->cont;
       char nombre[60];
       jugador* jugador_buscado;
@@ -243,48 +252,26 @@ void menu_jugadores(List* players,List* retos){
 
       menu_jugadores(players,retos);
     }else{
-      if(eleccion==3){
-        int cont=players->cont;
-        char nombre[60];
-        jugador* jugador_buscado;
-        printf("| Ingrese el nombre del jugador:\n");
-        scanf("%s",nombre);
-
-        jugador_buscado=first(players);
-        while(strcmp(jugador_buscado->nombre, nombre) != 0 ){
-          if(cont==0){
-            printf("| El jugador que busca no se encuentra ingresado.\n");
-            printf("| Volviendo al menu anterior oprima.\n");
-            system("pause");
-            menu_jugadores(players,retos);
-          }
-          jugador_buscado=next(players);
-          cont--;
-        }
-        jugador_buscado->flag_lose=1;
-
-      }else{
-          if(eleccion==4){
+        if(strcmp(eleccion,"3")==0){
             Main_menu(players,retos);
-          }else{
+        }else{
             printf("| Opcion no valida, por favor intente de nuevo.\n\n");
             system("pause");
             menu_jugadores(players,retos);
-          }
         }
       }
     }
   }//work
 
 void menu_retos(List* jugadores, List* retos){
-  int eleccion;
+  char eleccion[10];
   clear;
   printf("| ¿Que desea hacer?\n");
   printf("|-.1 Agregar un reto\n");
   printf("|-.2 Eliminar un reto\n");
   printf("|-.3 Volver al menu anterior (se guardan los cambios hechos)\n");
-  scanf("%d",&eleccion);
-  if(eleccion==1){
+  scanf("%s",eleccion);
+  if(strcmp(eleccion,"1")==0){
     reto* nuevo_reto=create_reto();
     printf("| Ingrese un nombre para el reto:(minimo una palabra)\n");
     scanf("%s",nuevo_reto->nombre);
@@ -296,7 +283,7 @@ void menu_retos(List* jugadores, List* retos){
     menu_retos(jugadores,retos);
 
   }else{
-    if(eleccion==2){
+    if(strcmp(eleccion,"2")==0){
       int cont=retos->cont;
       char nombre[60];
       reto* reto_buscado=first(retos);
@@ -317,9 +304,9 @@ void menu_retos(List* jugadores, List* retos){
       menu_retos(jugadores,retos);
 
       }else{
-      if(eleccion==3){
-        Main_menu(jugadores,retos);
-      }else{
+        if(strcmp(eleccion,"3")==0){
+          Main_menu(jugadores,retos);
+        }else{
           printf("| Opcion no valida, por favor intente de nuevo.\n\n");
           menu_retos(jugadores,retos);
       }
@@ -329,7 +316,7 @@ void menu_retos(List* jugadores, List* retos){
 
 void Main_menu(List* players,List* retos){
   clear;
-  int eleccion;
+  char eleccion[10];
   printf("Elige una de estas opciones escribiendo su numero\n");
   printf("|y a continuacion oprimiendo <ENTER>.\n");
   printf("|-.1 Jugar.\n");
@@ -338,27 +325,32 @@ void Main_menu(List* players,List* retos){
   printf("|-.4 Reglas y glosario de terminos.\n");
   printf("|-.5 acerda de.\n");
   printf("|-.6 Salida.\n");
-  scanf("%d",&eleccion);
+  scanf("%s",eleccion);
 
-  if(eleccion==1){
+  if(strcmp(eleccion,"1")==0){
     menu_modos(players,retos);
 
   }else{
-    if(eleccion==2){
+    if(strcmp(eleccion,"2")==0){
       menu_jugadores(players,retos);
 
     }else{
-      if(eleccion==3){
+      if(strcmp(eleccion,"3")==0){
         menu_retos(players,retos);
 
       }else{
-        if(eleccion==4){
-          glosario();
+        if(strcmp(eleccion,"4")==0){
+          glosario(players,retos);
 
         }else{
-          if(eleccion==5){
-            about();
+          if(strcmp(eleccion,"5")==0){
+            about(players,retos);
 
+          }else{
+              if(strcmp(eleccion,"6")!=0){
+                printf("| Opcion no valida pruebe de nuevo.");
+                Main_menu(players,retos);
+              }
           }
         }
       }
@@ -439,7 +431,7 @@ void modo_previa(List* players, List* retos){
       modo_motivados(players,retos);
     }
       Main_menu(players,retos);
-}//en pruebas
+}//work
 
 void modo_motivados(List* players,List* retos){
   //aca se cargan los retos.
@@ -475,35 +467,24 @@ void modo_motivados(List* players,List* retos){
   int n_reto;
   cont=cont*30;
   current_pj=first(players);
+
   while(cont>0){
     n_reto=random_n(cont_);
 
     current_reto=retos_motivados[n_reto];
-    if(n_reto > cont_){
-      if(n_reto == (cont_ +1)){
-        retos_SS_1(players,retos);
-      }else{
-        if(n_reto == (cont_+2)){
-          //retos_SS_2(players,retos);
-        }else{
-          if(n_reto == (cont_+3)){
-            //retos_SS_3(players,retos);
-          }
-        }
-      }
-    }else{
       if(current_reto){
         printf("|\n|\n|\n");
         printf("| \t\t\t%s\n",current_pj->nombre);
         printf("| %s\n| %s\n",current_reto->nombre,current_reto->descripcion);
-        Sleep(2000);
+
+        Sleep(3000);
         system("pause");
 
         cont--;
         current_pj=next(players);
       }
+
       clear;
-    }
   }
     printf("|Confirmemos que siguen vivos: \n");
     system("pause");
@@ -576,7 +557,7 @@ void modo_motivados(List* players,List* retos){
 void modo_retador(List* players,List* retos){
   int cont=0;
   List* retadores=create_list();
-  printf("Oh");
+  printf("| Oh");
   while(cont<=3){
     Sleep(1000);
     printf(".");
@@ -584,7 +565,7 @@ void modo_retador(List* players,List* retos){
   }
 
 
-  printf("| Wow siendo sincero no espere que alguien llegara hasta aqui.\n");
+  printf("\n| Wow siendo sincero no espere que alguien llegara hasta aqui.\n");
   system("pause");
   printf("| Dejame felicitarte a ti y a tu grupo por llegar tan lejos\n");
   system("pause");
@@ -607,14 +588,14 @@ void modo_retador(List* players,List* retos){
         printf("| Oprime '3' si no es ninguno.\n");
         scanf("%d",&eleccion);
         if(eleccion==1){
-          ganador=last(retadores);
+          ganador=first(retadores);
           printf("Felicidades %s has sobrevivido.\n",ganador->nombre);
           printf("Volviendo al menu principal.\n");
           system("pause");
           Main_menu(players,retos);
         }else{
             if(eleccion==2){
-              ganador=first(retadores);
+              ganador=last(retadores);
               printf("Felicidades %s has sobrevivido.\n",ganador->nombre);
               printf("Volviendo al menu principal.\n");
               system("pause");
@@ -622,14 +603,13 @@ void modo_retador(List* players,List* retos){
             }
         }
     }
-
+    cont++;
     printf("| Bebe %d tragos. \n",cont );
-    Sleep(10000);
-
+    Sleep(5000);
+    clear;
     current_challenger=next(retadores);
   }
 }//work
-
 
 void retos_SS_1(List* players,List* retos){
   int cont=200,cont2=0;
